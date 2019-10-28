@@ -1,6 +1,6 @@
 ﻿# IoT en el Supermercado
 ---
-#### Equipo *Camps Santa Fridge*
+#### Equipo *Campus Santa Fridge*
 
 ##### Integrantes:
 1. *Ruben Sanchez* - *A01021759* - *CSF*
