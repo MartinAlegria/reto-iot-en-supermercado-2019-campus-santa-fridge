@@ -5,9 +5,8 @@
 ##### Integrantes:
 1. *Ruben Sanchez* - *A01021759* - *CSF*
 2. *Martin Alegria* - *A01022216* - *CSF*
-3. *Sebastián Gómez* - *!01374843* - *CSF*
-4. *[Poner aquí Nombre y Apellidos del integrante 4]* - *[Poner aquí su Matrícula]* - *[Poner aquí su campus]*
-5. *[Poner aquí Nombre y Apellidos del integrante 5]* - *[Poner aquí su Matrícula]* - *[Poner aquí su campus]*
+3. *Sebastián Gómez* - *A01374843* - *CSF*
+4. *Carlos Garcia* - *A01025948* - *CSF*
 
 ---
 ## 1. Aspectos generales
