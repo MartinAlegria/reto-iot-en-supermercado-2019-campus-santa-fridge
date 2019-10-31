@@ -66,6 +66,8 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 
 *[Incluya aquí una explicación del análisis realizado y la justificación de los modelos y/o servicios de *Machine Learning* seleccionados. Incluya todo lo que considere necesario para que una persona sin conocimientos técnicos pueda entender de que trata su solución.]*
 
+*Para poder analizar las fotos tomadas con la cámara, se usaron los servicios de Microsoft Azure Cognitive Services. Este es un servicio que permite analizar fotos, encontrar caras y, en la cara más cercana que encuentra de las que están en la foto, determinar la edad, el género y el espacio, en la foto, en el que se encuentra la cara de la persona detectada. Nosotros decidimos usar Microsoft Azure Cognitive Services porque este nos permite saber la edad y el género de las personas que usan el refrigerador para así poder subir esta información a una base de datos, junto con la hora a la que se tomó la foto, y analizar el uso del refrigerador según la edad y el género.*
+
 ### 3.2 Arquitectura de la solución
 
 *[Incluya aquí un diagrama donde se aprecie la arquitectura de la solución implementada, así como la interacción entre los diferentes componentes de la misma.]*
@@ -85,6 +87,9 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 *[Incluya aquí una explicación de la solución utilizada para el backend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
 
 #### 3.4.1 Lenguaje de programación
+
+*Python 3.7*
+
 #### 3.4.2 Framework
 #### 3.4.3 Librerías de funciones o dependencias
 
@@ -96,7 +101,7 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 * **URL**:
 * **Verbos HTTP**:
 * **Headers**:
-* **Formato JSON del cuerpo de la solicitud**: 
+* **Formato JSON del cuerpo de la solicitud**:
 * **Formato JSON de la respuesta**:
 
 ### 3.5 Sensores
