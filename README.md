@@ -175,9 +175,9 @@ Circuitos
 16. Usar inventario.txt para registrar productos que se quieran usar. Ejemplo en el repositorio, orden debe ser: id_tag, sku, nombre de producto y cantidad.
 17. Usar programa rfid.py para escribir ids en los tags que se quieran usar.
 
-####Preparación de Google Platform
+#### Preparación de Google Platform
 
-####Cómo usar el refrigerador
+#### Cómo usar el refrigerador
 
 1. Cerrar refrigerador y correr main.
 2. Abrir puerta y posar para la cámara.
