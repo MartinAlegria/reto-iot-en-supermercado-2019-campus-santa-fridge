@@ -70,7 +70,7 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 
 ### 3.2 Arquitectura de la solución
 
-*[Incluya aquí un diagrama donde se aprecie la arquitectura de la solución implementada, así como la interacción entre los diferentes componentes de la misma.]*
+![alt text](Arquitectura.png "Diagrama")
 
 *[Incluya imágenes del circuito armado con los sensores conectados.]*
 
@@ -127,15 +127,17 @@ Se creó un registro llamado refrigerador con todos los dispositivos que utiliza
 
 #### 3.5.2 Librerías de funciones o dependencias
 
-*- fswebcam
+- fswebcam
 - GPIO
 - SPI Py
 - mfrc522
-- Adafruit_DHT*
+- Adafruit_DHT
 
 ## 3.6 Pasos a seguir para utilizar el proyecto
 
 *[Incluya aquí una guía paso a paso para poder utilizar el proyecto, desde la clonación de este repositorio hasta el despliegue de la solución en una Raspberry Pi y en una plataforma en la nube.]*
+
+*La carpeta de Adafruit_DHT debe de estar en la carpeta de sensores.*
 
 ## 4. Referencias
 
