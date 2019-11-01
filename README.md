@@ -75,6 +75,7 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 ![alt text](EnelRefri.jpg "Refri")
 
 ![alt text](CircuitoA.jpg "Circuito")
+
 *[Incluya imágenes del circuito armado con los sensores conectados.]*
 
 ### 3.3 Frontend
