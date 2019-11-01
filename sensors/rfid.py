@@ -7,12 +7,14 @@ sys.path.append('/home/pi/MFRC522-python')
 from mfrc522 import SimpleMFRC522
 
 reader = SimpleMFRC522()
+door_pin = 40
+GPIO.setup(door_pin, GPIO.IN,pull_up_down = GPIO.PUD_UP)
 
 def read_rfid():
     id, text=reader.read()
     print(id)
     return id
-    #print(text)
+        #print(text)
 
 def write_rfid():
     text = input("Write your input here")

@@ -14,7 +14,7 @@ root_cert_filepath = '/home/pi/Desktop/SantaFridge/Modulos/backend/roots.pem'
 project_id = 'santa-fridge'
 gcp_location = 'us-central1'
 registry_id = 'refrigerador'
-device_id = 'camara'
+device_id = 'rfid'
 
 def create_jwt():
     token = {
@@ -37,7 +37,7 @@ def on_connect(unusued_client, unused_userdata, unused_flags, rc):
 def on_publish(unused_client, unused_userdata, unused_mid):
     print('on_publish')
 
-def upload_data(transaction, f):
+def upload_data(transaction, data):
     try:
             # Get current time
         _CLIENT_ID = 'projects/{}/locations/{}/registries/{}/devices/{}'.format(
@@ -57,12 +57,11 @@ def upload_data(transaction, f):
         client.connect('mqtt.googleapis.com', 443)
         client.loop_start()
 
-        edad = f[0]['age']
-        genero = f[0]['gender']
-        id_sesion = transaction
+        rfid_id = data[]
 
-        payload = '{{ "ts": {}, "edad": {}, "genero": "{}" , "id_sesion": {}, "device_id": "{}" }}'.format(
-            int(time.time()), edad, genero, id_sesion, device_id)
+
+        payload = '{{ "ts": {}, "rfid_id": {}, "sku": "{}" , "nombre":"{}", "id_sesion": {}, "device_id": "{}" }}'.format(
+            int(time.time()), rfid_id, sku, nombre,id_sesion,device_id)
 
         # Uncomment following line when ready to publish
         client.publish(_MQTT_TOPIC, payload, qos=1)

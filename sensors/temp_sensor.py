@@ -9,7 +9,6 @@ pin =23
 GPIO.setmode(GPIO.BOARD)
 
 def temperatura():
-    print("asdasdas")
     humedad, temperatura = Adafruit_DHT.read(sensor,pin)
     if temperatura is None:
         print("NONE")
