@@ -182,9 +182,10 @@ SQL
 21. Ir a Pub/Sub a la subsección de "Suscripciones" y crear una de tipo pull.
 22. Seleccionar en el menú "Cloud Functions" y crear una tomando como base [la que se encuentra en el repositorio](https://github.com/tec-csf/reto-iot-en-supermercado-2019-campus-santa-fridge/blob/master/backend/cloud_function.py) y seleccionar Pub/Sub como el activador.
 23. Generar dos tablas con la siguiente configuración:
-![alt text](Tabla_1 "Tabla 1")
 
-![alt text](Tabla_2 "Tabla 2")
+![alt text](Tabla_1.jpg "Tabla 1")
+
+![alt text](Tabla_2.jpg "Tabla 2")
 
 #### Cómo usar el refrigerador
 
