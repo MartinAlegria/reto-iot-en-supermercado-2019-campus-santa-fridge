@@ -187,4 +187,4 @@ Circuitos
 
 ## 4. Referencias
 
-*[Incluya aquí las referencias a sitios de interés, datasets y cualquier otra información que haya utilizado para realizar el proyecto y que le puedan ser de utilidad a otras personas que quieran usarlo como referencia]*
+- [Link interesante.](https://github.com/vcubells/iot_supermercado)
