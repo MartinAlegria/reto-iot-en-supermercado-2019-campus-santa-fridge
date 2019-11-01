@@ -121,20 +121,7 @@ Circuitos
 - [Sensor RFID](https://medium.com/coinmonks/for-beginners-how-to-set-up-a-raspberry-pi-rfid-rc522-reader-and-record-data-on-iota-865f67843a2d)
 - [Sensor de Temperatura](https://github.com/adafruit/Adafruit_Python_DHT)
 
-*[Incluya aquí una explicación de cada uno de los endpoints que forman parte de la API. Cada endpoint debe estar correctamente documentado.]*
-
-*[Por cada endpoint debe incluir lo siguiente:]*
-
-* **Descripción**:
-* **URL**:
-* **Verbos HTTP**:
-* **Headers**:
-* **Formato JSON del cuerpo de la solicitud**:
-* **Formato JSON de la respuesta**:
-
 ### 3.5 Sensores
-
-*[Incluya aquí una explicación de la solución utilizada para implementar la captura de datos de los diferentes sensores en la Raspberry Pi. No olvide incluir las ligas o referencias donde se puede encontrar información de los sensores, lenguajes de programación, frameworks y librerías utilizadas.]*
 
 *En nuestra solución, utilizamos los siguientes sensores: sensor magnético, sensor RFID RC522 y el sensor DHT11 (temperatura y humedad). Además utilizamos una cámara Logitech HD Webcam y un buzzer.*
 
