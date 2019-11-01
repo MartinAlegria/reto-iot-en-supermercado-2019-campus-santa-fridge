@@ -86,11 +86,16 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 
 *[Incluya aquí una explicación de la solución utilizada para el backend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
 
-#### 3.4.1 Lenguaje de programación
+### 3.4.1.1 Backend Raspberry y sensores
+
+
+### 3.4.1.2 Google Cloud Platform
+
+
+#### 3.4.2 Lenguaje de programación
 
 *Python 3.7*
 
-#### 3.4.2 Framework
 #### 3.4.3 Librerías de funciones o dependencias
 
 *[Incluya aquí una explicación de cada uno de los endpoints que forman parte de la API. Cada endpoint debe estar correctamente documentado.]*
@@ -120,14 +125,13 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 
 *Python 3.7*
 
-#### 3.5.2 Framework
-#### 3.5.3 Librerías de funciones o dependencias
+#### 3.5.2 Librerías de funciones o dependencias
 
 *- fswebcam
 - GPIO
--SPI Py
+- SPI Py
 - mfrc522
--Adafruit_DHT*
+- Adafruit_DHT*
 
 ## 3.6 Pasos a seguir para utilizar el proyecto
 
