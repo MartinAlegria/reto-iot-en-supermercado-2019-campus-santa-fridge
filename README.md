@@ -187,6 +187,9 @@ SQL
 
 ![alt text](Tabla_2.jpg "Tabla 2")
 
+24. Hacer los queries ([sugerencias](https://github.com/tec-csf/reto-iot-en-supermercado-2019-campus-santa-fridge/blob/master/backend/queries.sql)) deseados y seleccionar "Guardar Datos como Tabla de BigQuery".
+25. Sobre estas tablas realizar los dashboards deseados.
+
 #### Cómo usar el refrigerador
 
 1. Cerrar refrigerador y correr main.
