@@ -77,8 +77,7 @@ Circuitos
 ![alt text](CircuitoA.jpg "Circuito")
 
 ### 3.3 Frontend
-
-*[Incluya aquí una explicación de la solución utilizada para el frontend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
+Desarrollamos distintos [queries](link) que nos sirvieron para después pasarlos a tablas independientes y poderlos convertir en un dashboard que presentara la información demanera concreta y fácil de interpretar para una mejor toma de decisiones.
 
 #### 3.3.1 Lenguaje de programación
 #### 3.3.2 Framework
