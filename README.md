@@ -64,19 +64,17 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 
 ### 3.1 Modelos o servicios de *Machine Learning* utilizados
 
-*[Incluya aquí una explicación del análisis realizado y la justificación de los modelos y/o servicios de *Machine Learning* seleccionados. Incluya todo lo que considere necesario para que una persona sin conocimientos técnicos pueda entender de que trata su solución.]*
-
 *Para poder analizar las fotos tomadas con la cámara, se usaron los servicios de Microsoft Azure Cognitive Services. Este es un servicio que permite analizar fotos, encontrar caras y, en la cara más cercana que encuentra de las que están en la foto, determinar la edad, el género y el espacio, en la foto, en el que se encuentra la cara de la persona detectada. Nosotros decidimos usar Microsoft Azure Cognitive Services porque este nos permite saber la edad y el género de las personas que usan el refrigerador para así poder subir esta información a una base de datos, junto con la hora a la que se tomó la foto, y analizar el uso del refrigerador según la edad y el género.*
 
 ### 3.2 Arquitectura de la solución
 
 ![alt text](Arquitectura.png "Diagrama")
 
-![alt text](EnelRefri.jpg "Refri")
+Circuitos
+
+![alt text](EnElRefri.jpg "Refri")
 
 ![alt text](CircuitoA.jpg "Circuito")
-
-*[Incluya imágenes del circuito armado con los sensores conectados.]*
 
 ### 3.3 Frontend
 
@@ -88,19 +86,29 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 
 ### 3.4 Backend
 
-*[Incluya aquí una explicación de la solución utilizada para el backend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
-
 #### 3.4.1.1 Backend Raspberry y sensores
 
+*Los archivos usados para controlar los sensores están en la carpeta de sensores. Estos son llamados desde el main.py y son: camera_module, rfid y temp_sensor.*
 
 #### 3.4.1.2 Google Cloud Platform
-Se creó un registro llamado refrigerador con todos los dispositivos que utilizamos en el proyecto. Creamos dos dispositivos, el primero llamado cámara que hace referencia a los datos de entrada de Azure de edad y género y rfid que es aquel funciona cuando hay una lectura de este mismo sensor en el refrigerador. Generamos una tabla para cada dispositivo y le agregamos una columna con el título device_id para que con una [función de cloud](https://github.com/tec-csf/reto-iot-en-supermercado-2019-campus-santa-fridge/blob/master/backend/cloud_function.py) tuviéramos la capacidad de discernir entre estos y colocarlos en su respectiva tabla. Adicional a las de cada dispositivo creamos tablas nuevas a partir de los queries generados para poder generar un dashboard en Power BI.
+
+*Se creó un registro llamado refrigerador con todos los dispositivos que utilizamos en el proyecto. Creamos dos dispositivos, el primero llamado cámara que hace referencia a los datos de entrada de Azure de edad y género y rfid que es aquel funciona cuando hay una lectura de este mismo sensor en el refrigerador. Generamos una tabla para cada dispositivo y le agregamos una columna con el título device_id para que con una [función de cloud](https://github.com/tec-csf/reto-iot-en-supermercado-2019-campus-santa-fridge/blob/master/backend/cloud_function.py) tuviéramos la capacidad de discernir entre estos y colocarlos en su respectiva tabla. Adicional a las de cada dispositivo creamos tablas nuevas a partir de los queries generados para poder generar un dashboard en Power BI.*
+
+*Para subir la información capturada por los sensores a Google Cloud Platform, se usaron dos archivos: upload_face_data.py y upload_products.py. El archivo de upload_face_data obtiene los datos de la persona capturada y sube un timestamp, edad, género, el id de a sesión y el id del device a la tabla de datos cámara que está en la nube. El archivo de upload_products obtiene la información de cada producto que una persona en específico sacó del refrigerador y sube un timestamp, el rfid, el sku, nombre del producto, id de la sesión y el id del device a la tabla de datos RFID que está en la nube.*
 
 #### 3.4.2 Lenguaje de programación
 
 *Python 3.7*
 
 #### 3.4.3 Librerías de funciones o dependencias
+
+*Sensores*
+
+- fswebcam
+- GPIO
+- SPI Py
+- mfrc522
+- Adafruit_DHT
 
 *[Incluya aquí una explicación de cada uno de los endpoints que forman parte de la API. Cada endpoint debe estar correctamente documentado.]*
 
@@ -131,11 +139,20 @@ Se creó un registro llamado refrigerador con todos los dispositivos que utiliza
 
 #### 3.5.2 Librerías de funciones o dependencias
 
+*Librerías*
+
 - fswebcam
 - GPIO
 - SPI Py
 - mfrc522
 - Adafruit_DHT
+
+*Referencias*
+
+-
+-
+-
+-
 
 ## 3.6 Pasos a seguir para utilizar el proyecto
 
