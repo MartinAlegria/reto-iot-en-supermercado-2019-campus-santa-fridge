@@ -86,11 +86,11 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 
 *[Incluya aquí una explicación de la solución utilizada para el backend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
 
-### 3.4.1.1 Backend Raspberry y sensores
+#### 3.4.1.1 Backend Raspberry y sensores
 
 
-### 3.4.1.2 Google Cloud Platform
-
+#### 3.4.1.2 Google Cloud Platform
+Se creó un registro llamado refrigerador con todos los dispositivos que utilizamos en el proyecto. Creamos dos dispositivos, el primero llamado cámara que hace referencia a los datos de entrada de Azure de edad y género y rfid que es aquel funciona cuando hay una lectura de este mismo sensor en el refrigerador. Generamos una tabla para cada dispositivo y le agregamos una columna con el título device_id para que con una [función de cloud](https://github.com/tec-csf/reto-iot-en-supermercado-2019-campus-santa-fridge/blob/master/backend/cloud_function.py) tuviéramos la capacidad de discernir entre estos y colocarlos en su respectiva tabla. Adicional a las de cada dispositivo creamos tablas nuevas a partir de los queries generados para poder generar un dashboard en Power BI.
 
 #### 3.4.2 Lenguaje de programación
 
