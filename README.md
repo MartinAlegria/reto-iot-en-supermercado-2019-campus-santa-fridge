@@ -96,19 +96,30 @@ Circuitos
 
 *Para subir la información capturada por los sensores a Google Cloud Platform, se usaron dos archivos: upload_face_data.py y upload_products.py. El archivo de upload_face_data obtiene los datos de la persona capturada y sube un timestamp, edad, género, el id de a sesión y el id del device a la tabla de datos cámara que está en la nube. El archivo de upload_products obtiene la información de cada producto que una persona en específico sacó del refrigerador y sube un timestamp, el rfid, el sku, nombre del producto, id de la sesión y el id del device a la tabla de datos RFID que está en la nube.*
 
+#### 3.4.1.3 Base de Datos Local
+
+*En las carpetas de datasets y db se encuentran dos archivos que son inventario.csv y transaction.txt. El archivo de transaction.txt sirve para llevar la cuenta de las transacciones y es llamado desde el main. El archivo inventario.csv tiene la información de los productos que pueden estar en el refrigerador. Desde el main, se llama a db_query.py el cual revisa el archivo de inventario para verificar que el sensor RFID haya detectado un producto que sí está entre nuestros productos. También sirve para manejar la cantidad disponible de cada producto en el refrigerador.*
+
 #### 3.4.2 Lenguaje de programación
 
 *Python 3.7*
 
 #### 3.4.3 Librerías de funciones o dependencias
 
-*Sensores*
+*Librerías Sensores*
 
 - fswebcam
 - GPIO
 - SPI Py
 - mfrc522
 - Adafruit_DHT
+
+*Referencias Senores*
+
+- [Uso de la cámara](https://github.com/vcubells/iot_supermercado/tree/master/demo_03)
+- [Uso de sensor magnético](https://www.alexisabarca.com/2016/01/usar-un-sensor-de-puerta-magnetico-en-un-raspberry-pi/)
+- [Sensor RFID](https://medium.com/coinmonks/for-beginners-how-to-set-up-a-raspberry-pi-rfid-rc522-reader-and-record-data-on-iota-865f67843a2d)
+- [Sensor de Temperatura](https://github.com/adafruit/Adafruit_Python_DHT)
 
 *[Incluya aquí una explicación de cada uno de los endpoints que forman parte de la API. Cada endpoint debe estar correctamente documentado.]*
 
@@ -149,10 +160,10 @@ Circuitos
 
 *Referencias*
 
--
--
--
--
+- [Uso de la cámara](https://github.com/vcubells/iot_supermercado/tree/master/demo_03)
+- [Uso de sensor magnético](https://www.alexisabarca.com/2016/01/usar-un-sensor-de-puerta-magnetico-en-un-raspberry-pi/)
+- [Sensor RFID](https://medium.com/coinmonks/for-beginners-how-to-set-up-a-raspberry-pi-rfid-rc522-reader-and-record-data-on-iota-865f67843a2d)
+- [Sensor de Temperatura](https://github.com/adafruit/Adafruit_Python_DHT)
 
 ## 3.6 Pasos a seguir para utilizar el proyecto
 
