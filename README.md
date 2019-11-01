@@ -51,12 +51,12 @@ Como parte de la entrega final del reto, se debe incluir la siguiente informaci�
 
 * Justificación del modelo o servicio de *Machine Learning* que seleccionaron.
 * Descripción del o los *datasets* y las fuentes de información utilizadas.
-* Guía de configuración, instalación y despliegue de la solución tanto en la Raspberry Pi como en la plataforma en la nube  seleccionada.
+* Guía de configuración, instalación y despliegue de la solución tanto en la Raspberry Pi como en la plataforma en la nube seleccionada.
 * El código debe estar documentado siguiendo los estándares definidos para el lenguaje de programación seleccionado.
 
 ## 2. Descripción del proyecto
 
-*[Incluya aquí la descripción del proyecto seleccionado.]*
+*Solución de Internet of Things aplicada en un refrigerador. A través de sensores, una Raspberry PI, servicios cognitivos (Microsoft Azure) y servicios en la nube (Google Cloud Platform), un refrigerador puede tomar fotos de las personas que lo utilizan, analizar estas fotos para determinar el género y edad de la persona detectada, saber qué productos saca cada persona del refrigerador, subir esta información a la nube para que pueda ser analizada y puede reaccionar cuando su temperatura interna se sale de un cierto rango. La informacion obtenida (género, edad, hora y productos sacados) es analizada con el servicio en la nube para saber a qué horas y días ciertas personas compran ciertos productos del refrigerador. Con esta información, se pueden tomar decisiones en cuánto a cuándo poner promiciones y a qué productos, cuándo poner publicidad para qué producto, etc. La solución también permite llevar un mejor control del inventario.*
 
 ## 3. Solución
 
@@ -108,9 +108,26 @@ A continuación aparecen descritos los diferentes elementos que forman parte de 
 
 *[Incluya aquí una explicación de la solución utilizada para implementar la captura de datos de los diferentes sensores en la Raspberry Pi. No olvide incluir las ligas o referencias donde se puede encontrar información de los sensores, lenguajes de programación, frameworks y librerías utilizadas.]*
 
+*En nuestra solución, utilizamos los siguientes sensores: sensor magnético, sensor RFID RC522 y el sensor DHT11 (temperatura y humedad). Además utilizamos una cámara Logitech HD Webcam y un buzzer.*
+
+*Para capturar las caras de las personas que usan el refrigerador, hicimos el programa de tal forma que la cámara toma una foto cuando el sensor magnético detecta que sus componentes han sido separados (es decir, la puerta se abrió). La cámara está conectada directamente a la Raspberry, mientras que el sensor magnético está conectado a un protoboard que a su vez esta conectado a la Raspberry en los pines correspondientes (datos y tierra). Si la puerta es cerrada y después se vuelve a abrir, entonces se toma otra foto. En el main, se detecta si la puerta se abrió y entonces se llama a una función (que está en otro archivo) para tomar la foto.*
+
+*Para medir la temperatura usamos, el sensor DHT11. Este es llamado constantemente en el main, si la temperatura sube de un cierto valor, un buzzer emite un sonido de alarma.*
+
+*El sensor RFID RC522 es usado para determinar si un producto sale del refrigerador y cuál fue el producto que salió. El sensor lee constantemente si el refrigerador esta abierto a través de una función que está en un archivo diferente del main. Cada vez que pasa un producto por el RFID, el buzzer omite un sonido y unos LEDs se prenden después de que se acabó de escanear el RFID. Entonces, el buzzer empieza emitir sonidos. Mientras se emiten los sonidos, se puede cerrar la puerta. Si no, el sensor RFID va a seguir leyendo. Para que el refrigerador funcione correctamente, la puerta debe de ser cerrada antes de que el buzzer deje de emitir sonidos después de que se acabó de escanear un producto.*
+
 #### 3.5.1 Lenguaje de programación
+
+*Python 3.7*
+
 #### 3.5.2 Framework
 #### 3.5.3 Librerías de funciones o dependencias
+
+*- fswebcam
+- GPIO
+-SPI Py
+- mfrc522
+-Adafruit_DHT*
 
 ## 3.6 Pasos a seguir para utilizar el proyecto
 
