@@ -129,7 +129,7 @@ Circuitos
 
 *Para medir la temperatura usamos, el sensor DHT11. Este es llamado constantemente en el main, si la temperatura sube de un cierto valor, un buzzer emite un sonido de alarma.*
 
-*El sensor RFID RC522 es usado para determinar si un producto sale del refrigerador y cuál fue el producto que salió. El sensor lee constantemente si el refrigerador esta abierto a través de una función que está en un archivo diferente del main. Cada vez que pasa un producto por el RFID, el buzzer omite un sonido y unos LEDs se prenden después de que se acabó de escanear el RFID. Entonces, el buzzer empieza emitir sonidos. Mientras se emiten los sonidos, se puede cerrar la puerta. Si no, el sensor RFID va a seguir leyendo. Para que el refrigerador funcione correctamente, la puerta debe de ser cerrada antes de que el buzzer deje de emitir sonidos después de que se acabó de escanear un producto.*
+*El sensor RFID RC522 es usado para determinar si un producto sale del refrigerador y cuál fue el producto que salió. El sensor lee constantemente si el refrigerador esta abierto a través de una función que está en un archivo diferente del main. Cada vez que pasa un producto por el RFID, el buzzer omite un sonido y unos LEDs se prenden después de que se acabó de escanear el RFID. Entonces, el buzzer empieza emitir sonidos. Mientras se emiten los sonidos, se puede cerrar la puerta. Si no, el sensor RFID va a seguir leyendo. Si se quiere cerrar la puerta afuera de los segundos durante los que se emiten sonidos,  entonces se debe de utilizar el tag negro de administrador.*
 
 #### 3.5.1 Lenguaje de programación
 
@@ -156,7 +156,34 @@ Circuitos
 
 *[Incluya aquí una guía paso a paso para poder utilizar el proyecto, desde la clonación de este repositorio hasta el despliegue de la solución en una Raspberry Pi y en una plataforma en la nube.]*
 
+1. [Preparar Raspberry Pi](https://github.com/vcubells/iot_supermercado/tree/master/demo_01)
+2. Clonar repositorio en la Raspberry Pi.
+3. Conectar corriente a Raspberry Pi y conectar entrada para que se pueda ver en un monitor.
+4. Instalar git, python 3.7, pip, wget y tener conexión a Internet.
+5. Cambiar la hora en la Raspberry Pi.
+6. Conectar cámara a Raspberry Pi.
+7. [Seguir instrucciones para crear entorno local y cuenta de Google Cloud.](https://github.com/vcubells/iot_supermercado/tree/master/demo_05)
+8. [Seguir tutorial para instalar librerías necesarias para el sensor RFID.](https://medium.com/coinmonks/for-beginners-how-to-set-up-a-raspberry-pi-rfid-rc522-reader-and-record-data-on-iota-865f67843a2d)
+9. [Seguir tutorial para instalar librerías necesarias para el sensor DHT_11](https://github.com/adafruit/Adafruit_Python_DHT)
 *La carpeta de Adafruit_DHT debe de estar en la carpeta de sensores.*
+10. [Para conectar sensor RFID a la Raspberry, favor de seguir instrucciones en el tutorial.](https://medium.com/coinmonks/for-beginners-how-to-set-up-a-raspberry-pi-rfid-rc522-reader-and-record-data-on-iota-865f67843a2d)
+11. Para conectar el sensor magnético, utilizar el pin 40 del board.
+12. Para conectar el buzzer, utilizar el pin 38.
+13. Para los LEDs, utilizar el pin 12.
+14. Para conectar el sensor de temperatura, utilizar el pin 23.
+15. Armar refrigerador al gusto.
+16. Usar inventario.txt para registrar productos que se quieran usar. Ejemplo en el repositorio, orden debe ser: id_tag, sku, nombre de producto y cantidad.
+17. Usar programa rfid.py para escribir ids en los tags que se quieran usar.
+
+####Preparación de Google Platform
+
+####Cómo usar el refrigerador
+
+1. Cerrar refrigerador y correr main.
+2. Abrir puerta y posar para la cámara.
+3. Escoger producto y pasar tag por en frente de sensor RFID.
+4. Esperar 4 segundos para poder escanear otro producto.
+*Durante estos 4 segundos, puede cerrar la puerta. Si no se cierra la puerta durante estos segundos, usar tag negro incluido para cerrar puerta.*
 
 ## 4. Referencias
 
