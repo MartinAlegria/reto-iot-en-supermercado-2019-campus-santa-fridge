@@ -78,11 +78,11 @@ Circuitos
 
 ### 3.3 Frontend
 
-*[Incluya aquí una explicación de la solución utilizada para el frontend del proyecto. No olvide incluir las ligas o referencias donde se puede encontrar información de los lenguajes de programación, frameworks y librerías utilizadas.]*
+Desarrollamos distintos [queries](https://github.com/tec-csf/reto-iot-en-supermercado-2019-campus-santa-fridge/blob/master/backend/queries.sql) que nos sirvieron para después pasarlos a tablas independientes y poderlos convertir en un dashboard que presentara la información demanera concreta y fácil de interpretar para una mejor toma de decisiones.
 
 #### 3.3.1 Lenguaje de programación
-#### 3.3.2 Framework
-#### 3.3.3 Librerías de funciones o dependencias
+
+SQL
 
 ### 3.4 Backend
 
@@ -176,6 +176,19 @@ Circuitos
 17. Usar programa rfid.py para escribir ids en los tags que se quieran usar.
 
 #### Preparación de Google Platform
+18. Antes de comenzar, revisar [este](https://github.com/vcubells/iot_supermercado/tree/master/demo_05) link y [este otro](https://github.com/vcubells/iot_supermercado/tree/master/demo_06) link para conocer el proceso.
+19. Ir a IoT Core y crear un proyecto llamado "santa-fridge".
+20. Crear un registro llamado "refrigerador" y los "camara" y "rfid" y asignar las llaves públicas de los dispositivos a utilizar.
+21. Ir a Pub/Sub a la subsección de "Suscripciones" y crear una de tipo pull.
+22. Seleccionar en el menú "Cloud Functions" y crear una tomando como base [la que se encuentra en el repositorio](https://github.com/tec-csf/reto-iot-en-supermercado-2019-campus-santa-fridge/blob/master/backend/cloud_function.py) y seleccionar Pub/Sub como el activador.
+23. Generar dos tablas con la siguiente configuración:
+
+![alt text](Tabla_1.jpg "Tabla 1")
+
+![alt text](Tabla_2.jpg "Tabla 2")
+
+24. Hacer los queries ([sugerencias](https://github.com/tec-csf/reto-iot-en-supermercado-2019-campus-santa-fridge/blob/master/backend/queries.sql)) deseados y seleccionar "Guardar Datos como Tabla de BigQuery".
+25. Sobre estas tablas realizar los dashboards deseados.
 
 #### Cómo usar el refrigerador
 
